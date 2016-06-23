@@ -17,7 +17,6 @@ while(true) do
   session.visit 'http://craigslist.org'
   if session.text.include?('missed connections')
     sleep 10
-    next
   else
     puts 'redirect detected, getting wifi...'
     sleep 5

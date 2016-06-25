@@ -11,10 +11,10 @@ Capybara::Webkit.configure do |config|
   config.skip_image_loading
 end
 
-session = Capybara::Session.new(:webkit)
-
 while(true) do
   begin
+    session = Capybara::Session.new(:webkit)
+
     session.visit 'http://craigslist.org'
     if session.text.include?('missed connections')
       sleep 10
